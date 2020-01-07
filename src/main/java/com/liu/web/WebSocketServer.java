@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
 import cn.hutool.log.Log;
 import cn.hutool.log.LogFactory;
 
-
 @ServerEndpoint("/iceservers/{userId}")
 @Component
 public class WebSocketServer {
@@ -48,7 +47,6 @@ public class WebSocketServer {
         }
 
         log.info("用户连接:"+userId+",当前在线人数为:" + getOnlineCount());
-
         try {
             sendMessage("连接成功");
         } catch (IOException e) {
